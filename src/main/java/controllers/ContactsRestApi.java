@@ -42,7 +42,7 @@ public class ContactsRestApi {
 	@PostMapping
 	public ResponseEntity<Contact> insertNewContact(@RequestBody Contact c) {
 		contactService.upsert(c);
-		return new ResponseEntity<Contact>(c, HttpStatus.CREATED);
+		return new ResponseEntity<Contact>(c, HttpStatus.OK);
 	}
 
 	@PutMapping
